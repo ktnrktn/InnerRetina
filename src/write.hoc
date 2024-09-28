@@ -1,0 +1,36 @@
+objref fp
+
+fp = new File()
+
+proc write_file () {
+    print "============== write ============\n"
+    dt = 0.025
+    tstop = 6000
+    /*---------------------------------
+                Open Files
+    ----------------------------------*/
+        fp.wopen("result.dat")
+    /*---------------------------------
+                Write in File
+    ---------------------------------*/
+
+    while(t<tstop){
+        //各細胞の膜電位
+        fp.printf("%f %f", t, R_BC[0].soma.v( 0.5 ))
+        fp.printf(" %f", ON_CBC[0].soma.v( 0.5 ))
+        fp.printf(" %f", OFF_CBC[0].soma.v( 0.5 ))
+        fp.printf(" %f", AIIAC[0].soma.v( 0.5 ))
+        fp.printf(" %f", ON_GC[0].soma.v( 0.5 ))
+        fp.printf(" %f", OFF_GC[0].soma.v( 0.5 ))
+        fp.printf(" %f", ONCB2ONGC[0][0].w)
+        fp.printf(" %f", OFFCB2OFFGC[0][0].w)
+        fp.printf(" %f\n", AC2OFFGC[0][0].eff)
+        // fprint("%f %f\n", t, IinjLT_rod)
+
+        fadvance()  //tをカウント
+    }
+    /*---------------------------------
+                Close Files
+    ---------------------------------*/
+        fp.close()
+}//end proc
