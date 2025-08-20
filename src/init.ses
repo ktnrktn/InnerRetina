@@ -1,0 +1,85 @@
+objectvar save_window_, rvp_
+objectvar scene_vector_[8]
+objectvar ocbox_, ocbox_list_, scene_, scene_list_
+{ocbox_list_ = new List()  scene_list_ = new List()}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,4500,-80,-20)
+scene_vector_[2] = save_window_
+{save_window_.view(0, -80, 4500, 60, 373, 100, 524.16, 232)}
+graphList[0].append(save_window_)
+save_window_.save_name("graphList[0].")
+save_window_.addvar("OFF_CBC[0].soma.v( 0.5 )", 7, 1, 0.8, 0.9, 2)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,4500,-80,-20)
+scene_vector_[3] = save_window_
+{save_window_.view(0, -80, 4500, 60, 923, 100, 525.12, 232.96)}
+graphList[0].append(save_window_)
+save_window_.save_name("graphList[0].")
+save_window_.addvar("ON_CBC[0].soma.v( 0.5 )", 3, 1, 0.8, 0.9, 2)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,4500,-80,-20)
+scene_vector_[4] = save_window_
+{save_window_.view(0, -80, 4500, 60, 373, 394, 524.16, 231.04)}
+graphList[0].append(save_window_)
+save_window_.save_name("graphList[0].")
+save_window_.addvar("AIIAC[0].soma.v( 0.5 )", 1, 1, 0.8, 0.9, 2)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,4500,-80,-20)
+scene_vector_[5] = save_window_
+{save_window_.view(0, -80, 4500, 60, 925, 394, 523.2, 232)}
+graphList[0].append(save_window_)
+save_window_.save_name("graphList[0].")
+save_window_.addvar("R_BC[0].soma.v( 0.5 )", 4, 1, 0.8, 0.9, 2)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,4500,-90,20)
+scene_vector_[6] = save_window_
+{save_window_.view(0, -90, 4500, 110, 374, 686, 524.16, 234.88)}
+graphList[0].append(save_window_)
+save_window_.save_name("graphList[0].")
+save_window_.addvar("OFF_GC[0].soma.v( 0.5 )", 5, 1, 0.8, 0.9, 2)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,4500,-90,20)
+scene_vector_[7] = save_window_
+{save_window_.view(0, -90, 4500, 110, 925, 687, 523.2, 233.92)}
+graphList[0].append(save_window_)
+save_window_.save_name("graphList[0].")
+save_window_.addvar("ON_GC[0].soma.v( 0.5 )", 3, 1, 0.8, 0.9, 2)
+}
+{
+xpanel("RunControl", 0)
+v_init = -65
+xvalue("Init","v_init", 1,"stdinit()", 1, 1 )
+xbutton("Init & Run","run()")
+xbutton("Stop","stoprun=1")
+runStopAt = 5
+xvalue("Continue til","runStopAt", 1,"{continuerun(runStopAt) stoprun=1}", 1, 1 )
+runStopIn = 1
+xvalue("Continue for","runStopIn", 1,"{continuerun(t + runStopIn) stoprun=1}", 1, 1 )
+xbutton("Single Step","steprun()")
+t = 0
+xvalue("t","t", 2 )
+tstop = 4500
+xvalue("Tstop","tstop", 1,"tstop_changed()", 0, 1 )
+dt = 0.0625
+xvalue("dt","dt", 1,"setdt()", 0, 1 )
+steps_per_ms = 40
+xvalue("Points plotted/ms","steps_per_ms", 1,"setdt()", 0, 1 )
+screen_update_invl = 0.05
+xvalue("Scrn update invl","screen_update_invl", 1,"", 0, 1 )
+realtime = 0
+xvalue("Real Time","realtime", 0,"", 0, 1 )
+xpanel(87,124)
+}
+objectvar scene_vector_[1]
+{doNotify()}

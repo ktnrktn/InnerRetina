@@ -1,0 +1,14 @@
+objref menubox3
+
+proc make_panel() {
+    menubox3 = new VBox()
+    menubox3.intercept(1)
+    xpanel("set state")
+    xvalue("state","state",1,"start()")
+
+    xpanel()
+    menubox3.intercept(0)
+    menubox3.map()
+}
+
+make_panel()

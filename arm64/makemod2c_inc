@@ -1,0 +1,168 @@
+./A2hh_A.c: .././/A2hh_A.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "A2hh_A.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./A2hh_A.o: ./A2hh_A.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./A2hh_k.c: .././/A2hh_k.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "A2hh_k.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./A2hh_k.o: ./A2hh_k.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./A2hh_na.c: .././/A2hh_na.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "A2hh_na.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./A2hh_na.o: ./A2hh_na.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./Bip_Ca.c: .././/Bip_Ca.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Bip_Ca.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./Bip_Ca.o: ./Bip_Ca.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./Bip_Cad.c: .././/Bip_Cad.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Bip_Cad.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./Bip_Cad.o: ./Bip_Cad.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./Bip_ih.c: .././/Bip_ih.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Bip_ih.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./Bip_ih.o: ./Bip_ih.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./Bip_Ka.c: .././/Bip_Ka.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Bip_Ka.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./Bip_Ka.o: ./Bip_Ka.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./Bip_Kca.c: .././/Bip_Kca.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Bip_Kca.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./Bip_Kca.o: ./Bip_Kca.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./Bip_Kv.c: .././/Bip_Kv.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Bip_Kv.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./Bip_Kv.o: ./Bip_Kv.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./CaT.c: .././/CaT.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "CaT.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./CaT.o: ./CaT.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./depsyn.c: .././/depsyn.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "depsyn.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./depsyn.o: ./depsyn.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./gap.c: .././/gap.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "gap.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./gap.o: ./gap.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./HCN.c: .././/HCN.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "HCN.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./HCN.o: ./HCN.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./Ifluct.c: .././/Ifluct.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Ifluct.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./Ifluct.o: ./Ifluct.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./IinjLT_offcbc.c: .././/IinjLT_offcbc.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "IinjLT_offcbc.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./IinjLT_offcbc.o: ./IinjLT_offcbc.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./IinjLT_oncbc.c: .././/IinjLT_oncbc.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "IinjLT_oncbc.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./IinjLT_oncbc.o: ./IinjLT_oncbc.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./IinjLT_rbc.c: .././/IinjLT_rbc.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "IinjLT_rbc.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./IinjLT_rbc.o: ./IinjLT_rbc.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./ribbon_syn.c: .././/ribbon_syn.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "ribbon_syn.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./ribbon_syn.o: ./ribbon_syn.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./spike.c: .././/spike.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "spike.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./spike.o: ./spike.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./spike2.c: .././/spike2.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "spike2.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./spike2.o: ./spike2.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
+./syn_bip_gan.c: .././/syn_bip_gan.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../.";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "syn_bip_gan.mod" -o "/Users/kitano/Desktop/retina/mod/arm64")
+
+./syn_bip_gan.o: ./syn_bip_gan.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../." $(INCLUDES) -fPIC -c $< -o $@
+
